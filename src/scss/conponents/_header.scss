@@ -1,0 +1,206 @@
+@use  '../util/extends';
+@use  '../conponents/body';
+
+.nav-bar
+{
+  @extend .flex,.container;
+  flex-wrap: wrap;
+  padding: .4rem 0;
+  &__logo
+  {
+      @extend .link;
+      color: #fff;
+      font-size: 25.6px;
+      font-weight:600;
+  }
+  &__container
+  {
+      @extend .flex;
+      justify-content: flex-end;
+      flex: 1;
+      flex-wrap: wrap;
+      font-size: .8rem;
+      font-weight: bold;
+      color: #B3C2F5;
+  }
+  &__icon
+  {
+      @extend .link;
+      margin: 0 .3rem 0 0;
+  }
+  &__name
+  {
+      @extend .flex;
+      position: relative;
+      gap: .2rem;
+      padding: .7rem .4rem;
+      border-radius: .3rem .3rem 0 0;
+      transition: ease-in-out 200ms;
+      &:hover 
+      {
+          background-color: #515f92;
+          color: #fff;
+          cursor: pointer;
+      }
+      &:hover .nav-bar__list
+      {
+          opacity: 1;
+          pointer-events: auto;
+      }
+  }
+  &__arrow
+  {
+      font-size: .6rem;
+  }
+  &__list
+  {
+      position: absolute;
+      border-radius: 0 0 .3rem .3rem;
+      list-style: none;
+      background-color: #515f92;
+      top: 100%;
+      width: 100%;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      overflow: hidden;
+      transition: ease-in-out 200ms;
+  }
+  &__item-link
+  {
+      @extend .link;
+      font-weight: 500;
+      padding: .3rem .4rem;
+      width: 100%;
+      &--border
+      {
+        border-bottom:1px solid #636d91;
+      }
+      &--padding
+      {
+        padding: .3rem .4rem .5rem .4rem;
+      }
+      &:hover
+      {
+        background-color: #636d91;
+      }
+  }
+  &__mob-btn
+  {
+      display:none;
+      cursor: pointer;
+      font-size: 1.4rem;
+      color: hsla(0,0%,100%,.5);
+      border-radius: .3rem;
+      padding: .4rem .9rem;
+      border: 1px solid hsla(0,0%,100%,.1);
+      background-color: unset;
+  }
+  &__mob-list
+  {
+      @extend .flex;
+      transition: ease-in-out .5s;
+      display: none;
+      margin: .5rem 0 0;
+      flex-wrap: wrap;
+      list-style: none;
+      width: inherit;
+  }
+  &__mob-item
+  {
+      flex: 25%;
+      padding: 0 .3rem;
+      margin: 0 0 .5rem;
+      &--small
+      {
+          flex: 20%;
+      }
+  }
+  &__mob-link
+  {
+      @extend .link;
+      border-radius: .9rem;
+      line-height: 1.1rem;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 8px 0;
+      background-color: #474e68;
+      &:hover
+      {
+          background-color: #5a6177;
+      }    
+  }
+  &__link
+  {
+      @extend .link;
+      padding: .7rem .9rem .7rem .5rem;
+  }
+  &__input-container
+  {
+      @extend .flex;
+      width: 12.5rem;
+      background-color: #293354;
+      border-radius: 3px;
+  }
+  &__input
+  {
+      font-size: .9rem;
+      width: 100%;
+      background-color: unset;
+      padding: 7px;
+      color: #fff;
+      border: none;
+      outline: none;
+  }
+  &__btn
+  {
+      @extend .link;
+      padding: 7px;
+      background-color: unset;
+      border: none;
+      outline: none;
+      font-size: .9rem;
+      cursor: pointer;
+      &--log-a-game
+      {
+          background-color: #ea377a;
+          margin: 0 0 0 .5rem;
+          color: #fff;
+          padding: 7px .7rem;
+          border-radius: .2rem;
+          transition: ease-in-out .3s;
+          i
+          {
+              margin: 0 .2rem 0 0;
+          }
+          &:hover
+          {
+              background-color: #f56ea0;
+          }
+      }
+  }
+}
+
+@media only screen and (max-width:990px)
+{
+    .nav-bar
+    {
+        &__name
+        {
+            display: none;
+        }
+        &__mob-btn,&__mob-list
+        {
+            display: flex;
+        }
+        &__input-container,&__btn--log-a-game
+        {
+            width: 100%;
+            margin-bottom: .5em;
+        }
+        &__btn--log-a-game
+        {
+            margin: 0;
+        }
+    }
+}

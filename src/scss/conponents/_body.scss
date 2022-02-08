@@ -1,0 +1,27 @@
+@use '../util/extends';
+.body
+{
+  border-top: 1px solid #293354; 
+  height: 100vh;
+  position: relative;
+  z-index:999;
+  background-color: #181921;
+  transition: ease .4s;
+  &__container
+  {
+     @extend .container;
+  }
+}
+.body.active
+{
+    transform: unset;
+}
+
+@media only screen and (max-width:990px) 
+{
+    .body
+    {
+        transform: translateY(-173.69px);
+    }
+    
+}

@@ -1,0 +1,58 @@
+.flex
+{
+    display: flex;
+    align-items: center;
+}
+.container
+{
+    width: 1110px;
+    max-width: 100%;
+    margin: 0 auto;
+}   
+.link
+{
+    display: block;
+    text-align: center;
+    color: #B3C2F5;
+    text-decoration: none;
+    &:hover
+    {
+        color: #fff;
+    }
+}
+@media only screen and (max-width:1200px)
+{
+    .container
+    {
+        width: 930px;
+        max-width: 100%;
+        margin: 0 auto;
+    } 
+}
+@media only screen and (max-width:990px)
+{
+    .container
+    {
+        width: 720px;
+        max-width: 100%;
+        margin: 0 auto;
+    } 
+}
+@media only screen and (max-width:767px)
+{
+    .container
+    {
+        width: 540px;
+        max-width: 100%;
+        margin: 0 auto;
+    } 
+}
+@media only screen and (max-width:575px)
+{
+    .container
+    {
+        width: 523px;
+        max-width: 100%;
+        margin: 0 auto;
+    } 
+}
