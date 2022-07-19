@@ -1,9 +1,9 @@
 //header
 const menuBtn = document.querySelector('.nav-bar__mob-btn');
-const body = document.querySelector('.body');
+const container = document.querySelector('.nav-bar__container');
 
 menuBtn.addEventListener('click',()=>
 {
-   body.classList.toggle('active');
+   container.classList.toggle('active');
 }
 )
